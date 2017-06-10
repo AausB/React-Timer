@@ -28,7 +28,7 @@ ReactDOM.render(
     <div className="container">
       <Navigation/>
       <div className="row">
-        <div className="columns small-12">
+        <div className="columns small-centered medium-6 large-4">
           <Switch>
             <Route exact path='/' component={Main}/>
             <Route path='/timer' component={Timer}/>

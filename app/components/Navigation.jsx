@@ -12,10 +12,10 @@ class Navigation extends React.Component {
               React Timer App (Nav.jsx)
             </li>
             <li>
-              <NavLink exact to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Timer</NavLink>
+              <NavLink exact to='/timer' activeClassName='active'>Timer</NavLink>
             </li>
             <li>
-              <NavLink exact to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Countdown</NavLink>
+              <NavLink exact to='/countdown' activeClassName='active'>Countdown</NavLink>
             </li>
           </ul>
         </div>

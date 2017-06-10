@@ -9,6 +9,8 @@ const Router = BrowserRouter;
 
 const {Main} = require('Main');
 const {Navigation} = require('Navigation');
+const {Countdown} = require('Countdown');
+const {Timer} = require('Timer');
 const {NotFound} = require('NotFound');
 
 // load foundation-sites with the style loader and css loader
@@ -29,6 +31,8 @@ ReactDOM.render(
         <div className="columns small-12">
           <Switch>
             <Route exact path='/' component={Main}/>
+            <Route path='/timer' component={Timer}/>
+            <Route path='/countdown' component={Countdown}/>
             <Route component={NotFound}/>
           </Switch>
         </div>

@@ -12,7 +12,7 @@ class CountdownForm extends React.Component {
     // start with: ^
     // one to many numbers [0-9]*
     // end with:$
-    if (strSeconds.match(/^[0-9]*$/)) {
+    if (strSeconds.match(/^[0-9]+$/)) {
       // empty input field
       this.refs.seconds.value = '';
       // call callback from parent handleSetCountdown()

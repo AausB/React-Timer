@@ -12,6 +12,7 @@ describe('CountdownForm', () => {
     expect(CountdownForm).toExist();
   });
 
+  // Test whether a function is OR is not called with which arguments 
   it('should call onSetCountdown if valid seconds entered', () => {
     // create a spy
     let spy = expect.createSpy();

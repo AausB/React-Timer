@@ -1,4 +1,5 @@
 const React = require('react');
+const Clock = require('Clock');
 
 class Timer extends React.Component {
   render() {

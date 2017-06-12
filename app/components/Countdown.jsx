@@ -13,6 +13,8 @@ class Countdown extends React.Component {
     }
   }
 
+  // componentDidUpdate() is invoked immediately after updating occurs.
+  // This method is not called for the initial render.
   componentDidUpdate = (prevProps, prevState) => {
     // is there a change of the countdownStatus?
     if (this.state.countdownStatus !== prevState.countdownStatus) {
@@ -30,6 +32,34 @@ class Countdown extends React.Component {
     }
   }
 
+  // // componentWillUpdate() is invoked immediately before rendering
+  // // when new props or state are being received.
+  // componentWillUpdate = (nextProps, nextState) => {
+  //
+  // }
+  //
+  // // componentWillReceiveProps() is invoked before a mounted component receives new props.
+  // componentWillReceiveProps = (nextProps) => {
+  //
+  // }
+  //
+  // // componentWillMount() called right before render()
+  // componentWillMount = () => {
+  //   console.log('component WILL mount');
+  // }
+  //
+  // // componentDidMount() is invoked immediately after a component is mounted
+  // componentDidMount = () => {
+  //   console.log('component DID mount');
+  // }
+  //
+  // // componentWillUnmount() before component gets unmounted (removed)
+  // componentWillUnmount = () => {
+  //   console.log('component WILL unmount');
+  //   this.stopTimer();
+  //   console.log('clear interval an timer');
+  // }
+
   startTimer = () => {
     this.timer = setInterval(() => {
       let newCount = (this.state.count > 0) ? (this.state.count - 1) : 0;
@@ -37,7 +67,7 @@ class Countdown extends React.Component {
         count: newCount
       });
       if (newCount === 0) {
-        this.stopTimer();
+        this.setState({countdownStatus: 'stopped'});
       }
     }, 1000);
   }

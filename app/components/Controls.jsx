@@ -4,6 +4,11 @@ const PropTypes = require('prop-types');
 
 class Controls extends React.Component {
 
+  // componentWillReceiveProps() is invoked before a mounted component receives new props.
+  // componentWillReceiveProps = (newProps) => {
+  //   console.log('component will receive props: ', newProps.countdownStatus);
+  // }
+
   onStatusChange = (newStatus) => {
     // returns a function that calls the props function which is
     // submitted by the parent react element Countdown.jsx

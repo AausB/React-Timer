@@ -20,6 +20,11 @@ class Controls extends React.Component {
 
     let renderStartStopButton = () => {
       if (countdownStatus === 'started') {
+        // IMPORTANT !!!
+        // REACT specific: onClick expects a function not a function call
+        // this is why Controls.onStatusChange() returns a function!
+        // Same as this (by alex):
+        // <button className='button secondary' onClick={() => this.props.onStatusChange('paused')}>Pause</button>
         return(
           <button className='button secondary' onClick={this.onStatusChange('paused')}>Pause</button>
         );

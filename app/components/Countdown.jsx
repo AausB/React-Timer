@@ -24,7 +24,7 @@ class Countdown extends React.Component {
           break;
         case 'stopped':
           this.setState({count: 0});
-          //break;
+          //break; // intentionally not break here because "stopped" shares with "paused"
         case 'paused':
           this.stopTimer();
           break;
@@ -53,12 +53,11 @@ class Countdown extends React.Component {
   //   console.log('component DID mount');
   // }
   //
-  // // componentWillUnmount() before component gets unmounted (removed)
-  // componentWillUnmount = () => {
-  //   console.log('component WILL unmount');
-  //   this.stopTimer();
-  //   console.log('clear interval an timer');
-  // }
+
+  // componentWillUnmount() before component gets unmounted (removed)
+  componentWillUnmount = () => {
+    this.stopTimer();
+  }
 
   startTimer = () => {
     this.timer = setInterval(() => {

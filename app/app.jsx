@@ -15,7 +15,9 @@ const {NotFound} = require('NotFound');
 
 // load foundation-sites with the style loader and css loader
 // 'style-loader!css-loader!foundation-sites/dist/css/foundation.min.css'
-require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+// removed: because we use the foundation-sites/scss with webpack.config.js
+// checkout sassLoader there
+// require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
 $(document).foundation();
 
 // add custom styles to all pages

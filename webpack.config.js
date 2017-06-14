@@ -67,8 +67,32 @@ module.exports = {
             },
           }
         ]
-
+      },
+      {
+          test: /\.scss$/,
+          use: [
+                {
+                  loader: 'sass-loader',
+                  options: {
+                    sourceMap: true,
+                    includePaths: [
+                      path.resolve(__dirname, 'node_modules/foundation-sites/scss'),
+                    ]
+                  }
+                }
+          ]
       }
+      // {
+      //    test: /\.scss$/,
+      //    includePaths: [
+      //      path.resolve(__dirname, "node_modules/foundation-sites/scss")
+      //    ],
+      //    use: [
+      //         // { loader: "style-loader" },
+      //         // { loader: "css-loader" },
+      //         { loader: "sass-loader" }
+      //    ]
+      //  }
     ]
   },
   // https://webpack.js.org/configuration/devtool/

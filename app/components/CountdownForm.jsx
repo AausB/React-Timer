@@ -8,6 +8,9 @@ class CountdownForm extends React.Component {
     // get value from the input field
     let strSeconds = this.refs.seconds.value;
 
+    // include any jQuery commands in react
+    console.log('input count', $('input').length);
+
     // check with regex
     // start with: ^
     // one to many numbers [0-9]*
